@@ -1,3 +1,22 @@
+body {
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+.App {
+  margin: 0;
+}
+.j {
+  text-align: center;
+}
+.c {
+  text-align: center;
+  background-color: rgb(10, 167, 230);
+  color: white;
+}
+nav {
+  background-color: rgb(10, 167, 230);
+}
 h1 {
   text-align: center;
 }
@@ -9,6 +28,7 @@ h1 {
 span {
   margin-left: 50px;
   font-size: 28px;
+  color: black;
 }
 
 button {
@@ -17,4 +37,10 @@ button {
   size: 2rem;
   padding: 5px;
   font-size: 16px;
+  width: 100px;
+}
+footer {
+  margin-top: 340px;
+  color: blue;
+  text-align: center;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 class App extends Component {
   state = {
@@ -19,7 +20,7 @@ class App extends Component {
   };
   showbmi = () => {
     this.setState((state) => ({
-      o: !state.o,
+      o: true,
       b: state.w / (state.h * state.h),
     }));
     console.log(this.state.b);
@@ -31,24 +32,55 @@ class App extends Component {
       f = <h1>Your Bmi is {this.state.b}</h1>;
     }
     return (
-      <div className="App">
-        <h1>WEIGHT LOSS JOURNEY</h1>
-        <span>Enter Weight</span>
-        <div className="hey">
-          <input
-            type="text"
-            placeholder="weight (kgs)"
-            onChange={this.updatew}
-          />
+      <div className="App container-fluid">
+        <h1 className="c">WEIGHT LOSS JOURNEY</h1>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 className="j">BMI CALCULATOR</h2>
+            <div className="card card-body">
+              <span>Enter Weight</span>
+              <div className="hey">
+                <input
+                  type="text"
+                  placeholder="weight (kgs)"
+                  onChange={this.updatew}
+                />
+              </div>
+              <span>Enter Height</span>
+              <div className="hey">
+                <input
+                  type="text"
+                  placeholder="Height (m)"
+                  onChange={this.updateh}
+                />
+              </div>
+              <button
+                type="submit"
+                onClick={this.showbmi}
+                className="btn-primary"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 className="j">Find your category</h2>
+            <div className="card card-body">
+              <ul>
+                <li>If BMI > 30 , Obese</li>
+                <li>If BMI > 30 , Obese</li>
+                <li>If BMI > 30 , Obese</li>
+                <li>If BMI > 30 , Obese</li>
+                <li>If BMI > 30 , Obese</li>
+                <li>If BMI > 30 , Obese</li>
+                <li>If BMI > 30 , Obese</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <span>Enter Height</span>
-        <div className="hey">
-          <input type="text" placeholder="Height (m)" onChange={this.updateh} />
-        </div>
-        <button type="submit" onClick={this.showbmi}>
-          Submit
-        </button>
         {f}
+        <footer>CopyRight Nikhil</footer>
       </div>
     );
   }
