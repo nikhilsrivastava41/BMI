@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  FaFacebookF,
+  FaInstagramSquare,
+  FaCreativeCommonsPd,
+} from "react-icons/fa";
 import "./App.css";
 class App extends Component {
   state = {
@@ -68,19 +73,32 @@ class App extends Component {
             <h2 className="j">Find your category</h2>
             <div className="card card-body">
               <ul>
-                <li>If BMI > 30 , Obese</li>
-                <li>If BMI > 30 , Obese</li>
-                <li>If BMI > 30 , Obese</li>
-                <li>If BMI > 30 , Obese</li>
-                <li>If BMI > 30 , Obese</li>
-                <li>If BMI > 30 , Obese</li>
-                <li>If BMI > 30 , Obese</li>
+                <li>
+                  <h4>If BMI less than 18.5 , Underweight</h4>
+                </li>
+                <li>
+                  <h4>
+                    If BMI greater than 18.5 and BMI less than 25 , Normal
+                    Weight
+                  </h4>
+                </li>
+                <li>
+                  <h4>
+                    If BMI greater than 25 and BMI less than 29.9 , Overweight
+                  </h4>
+                </li>
+                <li>
+                  <h4>If BMI greater than 30 , Obese</h4>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         {f}
-        <footer>CopyRight Nikhil</footer>
+        <footer>
+          CopyRight <FaCreativeCommonsPd /> Nikhil <FaFacebookF />{" "}
+          <FaInstagramSquare />{" "}
+        </footer>
       </div>
     );
   }

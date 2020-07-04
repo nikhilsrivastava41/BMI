@@ -41,6 +41,6 @@ button {
 }
 footer {
   margin-top: 340px;
-  color: blue;
   text-align: center;
+  justify-content: space-between;
 }
