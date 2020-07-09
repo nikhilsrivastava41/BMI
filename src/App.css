@@ -3,12 +3,6 @@ body {
   color: black;
   margin: 0;
 }
-.App {
-  margin: 0;
-}
-.j {
-  text-align: center;
-}
 .c {
   text-align: center;
   background-color: rgb(10, 167, 230);
@@ -17,7 +11,7 @@ body {
 nav {
   background-color: rgb(10, 167, 230);
 }
-h1 {
+h5 {
   text-align: center;
 }
 
@@ -25,10 +19,9 @@ h1 {
   margin-left: 50px;
 }
 
-span {
-  margin-left: 50px;
-  font-size: 28px;
-  color: black;
+.ya {
+  font-size: 25px;
+  font-weight: 1rem;
 }
 
 button {
@@ -43,4 +36,8 @@ footer {
   margin-top: 340px;
   text-align: center;
   justify-content: space-between;
+}
+.card {
+  margin-top: 40px;
+  padding: 20px;
 }
