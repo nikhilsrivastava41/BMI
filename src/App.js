@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import {
   FaFacebookF,
   FaInstagramSquare,
@@ -13,22 +12,17 @@ class App extends Component {
     h: 1,
     b: 1,
   };
-  updatew = (e) => {
+  update = (e) => {
     this.setState({
-      w: e.target.value,
+      [e.target.id]: e.target.value,
     });
   };
-  updateh = (e) => {
-    this.setState({
-      h: e.target.value,
-    });
-  };
+  
   showbmi = () => {
     this.setState((state) => ({
       o: true,
       b: state.w / (state.h * state.h),
     }));
-    console.log(this.state.b);
   };
   render() {
     const on = this.state.o;
@@ -38,61 +32,51 @@ class App extends Component {
     }
     return (
       <div className="App container-fluid">
-        <h1 className="c">WEIGHT LOSS JOURNEY</h1>
+        <nav className="c nav-wrapper grey darken-3">
+        <a className="center brand-logo">WEIGHT LOSS JOURNEY
+        </a>
+        </nav>
 
         <div class="row">
-          <div class="col-lg-6">
-            <h2 className="j">BMI CALCULATOR</h2>
-            <div className="card card-body">
-              <span>Enter Weight</span>
-              <div className="hey">
-                <input
-                  type="text"
+          <div class="col s12 m6">
+            <div className="card">
+            <span class="card-title">BMI CALCULATOR</span>
+            <div className="input-field">
+            <label htmlFor="lastName">Enter Weight</label>
+            <input
+              type="text"
                   placeholder="weight (kgs)"
-                  onChange={this.updatew}
-                />
-              </div>
-              <span>Enter Height</span>
-              <div className="hey">
-                <input
-                  type="text"
-                  placeholder="Height (m)"
-                  onChange={this.updateh}
-                />
-              </div>
-              <button
-                type="submit"
-                onClick={this.showbmi}
-                className="btn-primary"
-              >
-                Submit
-              </button>
+                  id="w"
+                  onChange={this.update}
+            ></input>
+          </div>
+              <div className="input-field">
+            <label htmlFor="lastName">Enter Height</label>
+            <input
+              type="text"
+                  placeholder="height (m)"
+                  id="h"
+                  onChange={this.update}
+            ></input>
+          </div>
+          <div className="input-field">
+            <button type="submit" className="btn pink lighten-1 z-depth-0" onClick={this.showbmi}>Submit</button>
+          </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <h2 className="j">Find your category</h2>
-            <div className="card card-body">
-              <ul>
-                <li>
-                  <h4>If BMI less than 18.5 , Underweight</h4>
-                </li>
-                <li>
-                  <h4>
-                    If BMI greater than 18.5 and BMI less than 25 , Normal
-                    Weight
-                  </h4>
-                </li>
-                <li>
-                  <h4>
-                    If BMI greater than 25 and BMI less than 29.9 , Overweight
-                  </h4>
-                </li>
-                <li>
-                  <h4>If BMI greater than 30 , Obese</h4>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
         </div>
         {f}
         <footer>
